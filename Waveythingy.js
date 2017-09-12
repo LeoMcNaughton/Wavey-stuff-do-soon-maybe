@@ -12,16 +12,16 @@ let Waveythingy = function(array){
   function = getPointArray(){ return PointsArray;}
 
   function = shiftX(value){
-
+    transformedPoints.get(X)
   }
   function = shiftY(value){
-
+    transformedPoints
   }
   function = stretchX(value){
-
+    Points
   }
   function = stretchY(value){
-
+    Points
   }
   function = transformation(){
 
@@ -32,5 +32,5 @@ let Waveythingy = function(array){
   calculateSpan(array){
 
   }
-  
+
 }
