@@ -1,9 +1,9 @@
 let Point = require(.Point/js){}
 
 let Waveythingy = function(array){
-  let numberOfPoints = ;
-  let Points = ;
-  let transformedPoints = ;
+  let numberOfPoints = array;
+  let Points = array;
+  let transformedPoints = array;
   let range = r;
   let period = p;
 
@@ -12,25 +12,27 @@ let Waveythingy = function(array){
   function = getPointArray(){ return PointsArray;}
 
   function = shiftX(value){
-    transformedPoints.get(X)
+    transformedPoints.getX()=points.getx+value;
   }
   function = shiftY(value){
-    transformedPoints
+    transformedPoints.getY()=points.gety+value;
   }
   function = stretchX(value){
-    Points
+    Points.getX()=points.getx*value;
   }
   function = stretchY(value){
-    Points
+    Points.getY()=points.gety*value;
   }
   function = transformation(){
 
   }
   function = outputOf(xvalue){
+     for(let x = 0; x < points.length; x++){
 
+     }
   }
   calculateSpan(array){
 
   }
-
+   return(shiftX,shiftY,stretchX,stretchY,transformation,outputOf)
 }
