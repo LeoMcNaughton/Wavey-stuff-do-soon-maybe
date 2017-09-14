@@ -1,7 +1,7 @@
 let Point = require(.Point/js){}
 
 let Waveythingy = function(array){
-  let numberOfPoints = array;
+  let numberOfPoints = array.length;
   let Points = array;
   let transformedPoints = array;
   let range = r;
@@ -12,16 +12,32 @@ let Waveythingy = function(array){
   function = getPointArray(){ return PointsArray;}
 
   function = shiftX(value){
-    transformedPoints.getX()=points.getx+value;
+    for(a=0; a<numberOfPoints; a++){
+      let tempx = transformedPoints[a].getX();
+      let tempy = transformedPoints[a].getY();s
+    }
   }
   function = shiftY(value){
-    transformedPoints.getY()=points.gety+value;
+    for(a=0; a<numberOfPoints; a++){
+      let tempx = transformedPoints[a].getX();
+      let tempy = transformedPoints[a].getY();
+    }
   }
   function = stretchX(value){
-    Points.getX()=points.getx*value;
+    for(a=0; a<numberOfPoints; a++){
+      let tempx = transformedPoints[a].getX();
+      let tempy = transformedPoints[a].getY();
+      tempx *=value;
+      transformedPoints[a]= new Point(tempx, tempy);
+    }
   }
   function = stretchY(value){
-    Points.getY()=points.gety*value;
+    for(a=0; a<numberOfPoints; a++){
+      let tempx = transformedPoints[a].getX();
+      let tempy = transformedPoints[a].getY();
+      tempy *=value;
+      transformedPoints[a]= new Point(tempx, tempy);
+    }
   }
   function = transformation(){
 
