@@ -21,7 +21,7 @@ const Point = function(xcor,ycor){
             return 180 + angle;
         }
         else{
-            return 360+angle
+            return 360+angle;
         }
 
     }

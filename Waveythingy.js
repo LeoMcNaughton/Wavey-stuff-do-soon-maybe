@@ -14,7 +14,7 @@ let Waveythingy = function(array){
   function = shiftX(value){
     for(a=0; a<numberOfPoints; a++){
       let tempx = transformedPoints[a].getX();
-      let tempy = transformedPoints[a].getY();s
+      let tempy = transformedPoints[a].getY();
     }
   }
   function = shiftY(value){
@@ -40,15 +40,20 @@ let Waveythingy = function(array){
     }
   }
   function = transformation(){
-
+    return transformation;
   }
   function = outputOf(xvalue){
      for(let x = 0; x < points.length; x++){
-
+          if(point.getX()[x] == xvalue){
+            return points.getY();
      }
   }
-  calculateSpan(array){
+  console.log("X value has no Y value.");
+}
+  function calculateSpan(array){
+     for(let a = 0;a < points.length;a++){
 
+     }
   }
    return(shiftX,shiftY,stretchX,stretchY,transformation,outputOf)
 }

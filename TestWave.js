@@ -15,7 +15,7 @@ function main(){
 
     let testWave = new Wave(array);
 
-    testWave.transform().forEach(function(point){
+    testWave.transformation().forEach(function(point){
         point.print();
     });
     console.log("--------");
@@ -26,7 +26,7 @@ function main(){
 
     let secondWave = new Wave(testWave.transform());
 
-    secondWave.transform().forEach(function(point){
+    secondWave.transformation().forEach(function(point){
         point.print();
     });
 
