@@ -1,29 +1,33 @@
-let Point = require(.Point/js){}
+let Point = require("./Point.js");
 
 let Waveythingy = function(array){
   let numberOfPoints = array.length;
-  let Points = array;
+  let points = array;
   let transformedPoints = array;
-  let range = r;
-  let period = p;
+  let range = calculateSpan(array,"Y");
+  let period = calculateSpan(array,"X");
 
-  function = getRange(){ return Range;}
-  function = getPeriod(){ return Period;}
-  function = getPointArray(){ return PointsArray;}
+  function getRange(){ return range;}
+  function getPeriod(){ return period;}
+  function getPointArray(){ return transformedPoints;}
 
-  function = shiftX(value){
+  function shiftX(value){
     for(a=0; a<numberOfPoints; a++){
       let tempx = transformedPoints[a].getX();
       let tempy = transformedPoints[a].getY();
+      temp += value;
+      transformedPoints[a]= new Point(tempx, tempy);
     }
   }
-  function = shiftY(value){
+  function shiftY(value){
     for(a=0; a<numberOfPoints; a++){
       let tempx = transformedPoints[a].getX();
       let tempy = transformedPoints[a].getY();
+      temp += value;
+      transformedPoints[a]= new Point(tempx, tempy);
     }
   }
-  function = stretchX(value){
+  function stretchX(value){
     for(a=0; a<numberOfPoints; a++){
       let tempx = transformedPoints[a].getX();
       let tempy = transformedPoints[a].getY();
@@ -31,7 +35,7 @@ let Waveythingy = function(array){
       transformedPoints[a]= new Point(tempx, tempy);
     }
   }
-  function = stretchY(value){
+  function stretchY(value){
     for(a=0; a<numberOfPoints; a++){
       let tempx = transformedPoints[a].getX();
       let tempy = transformedPoints[a].getY();
@@ -39,21 +43,40 @@ let Waveythingy = function(array){
       transformedPoints[a]= new Point(tempx, tempy);
     }
   }
-  function = transformation(){
-    return transformation;
+  function transform(){
+    return transform;
   }
-  function = outputOf(xvalue){
-     for(let x = 0; x < points.length; x++){
-          if(point.getX()[x] == xvalue){
-            return points.getY();
+  function outputOf(xvalue){
+     let position = xvalue % period;
+     return points[position].getY();
      }
-  }
-  console.log("X value has no Y value.");
-}
-  function calculateSpan(array){
-     for(let a = 0;a < points.length;a++){
+  function calculateSpan(array,coor){
+     let max = points[0];
+     let min = points[0];
+     if(coor = "X"){
+       for (let p=1;p<numberOfPoints;p++){
+         if(points[p].getX() < min){
+           min = points[p].getX();
+       }
+       if(points[p].getX() > max){
+           max = points[p].getX();
+       }
+       return max-min;
+     }
+   }
+     else if(coor = "Y"){
+       for (let p=1;p<numberOfPoints;p++){
+         if(points[p].getY() < min){
+           min = points[p].getY();
+         }
+           if(points[p].getY() > max){
+               max = points[p].getY();
+           }
+     }
 
-     }
   }
-   return(shiftX,shiftY,stretchX,stretchY,transformation,outputOf)
+  return max-min;
 }
+   return(shiftX,shiftY,stretchX,stretchY,transform,outputOf,calculateSpan)
+}
+module.exports = Waveythingy;
